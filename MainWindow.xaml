@@ -19,6 +19,8 @@
             <Button Name="BtnMoveUp" Click="BtnMoveUp_Click">Move Up</Button>
             <Button Name="BtnMoveDown" Click="BtnMoveDown_Click">Move Down</Button>
             <Button Name="BtnRemove" Click="BtnRemove_Click">Remove</Button>
+            <Button Name="BtnClear" Click="BtnClear_Click">Clear...</Button>
+            <Separator Margin="0,0,0,10"></Separator>
             <Button Name="BtnMerge" Click="BtnMerge_Click" IsDefault="True" FontWeight="Bold">Merge...</Button>
         </StackPanel>
         <ListBox Name="ItemsList" HorizontalContentAlignment="Stretch" SelectionMode="Single">

@@ -70,6 +70,12 @@ namespace StoryMerge
             ItemsList.SelectedIndex = currentIndex;
         }
 
+        private void BtnClear_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to clear the list of stories?", "StoryMerge", MessageBoxButton.OKCancel);
+            if (result == MessageBoxResult.OK) _items.Clear();
+        }
+
         private void BtnMerge_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -99,12 +105,12 @@ namespace StoryMerge
                 if (result == true)
                 {
                     File.WriteAllLines(saveFileDialog.FileName, lines);
-                    MessageBox.Show($"Stories successfully merged into {saveFileDialog.FileName}");
+                    MessageBox.Show($"Stories successfully merged into {saveFileDialog.FileName}", "StoryMerge");
                 }
             }
             catch(IOException exception)
             {
-                MessageBox.Show($"An error occurred while merging stories: {exception.Message}");
+                MessageBox.Show($"An error occurred while merging stories: {exception.Message}", "StoryMerge");
             }
             
         }
